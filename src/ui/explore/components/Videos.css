@@ -1,0 +1,392 @@
+.main-content {
+    display: flex;
+    flex-direction: column;
+    /* Change to column direction */
+    justify-content: flex-start;
+    /* Align to the start */
+    margin-top: 50px;
+    /* Reduce the margin */
+    margin-left: 120px;
+    /* Align close to the sidebar */
+    margin-bottom: 350px;
+}
+
+.content-box {
+    width: 75%;
+    /* Reduce the width */
+    background-color: #f9f9f9;
+    padding: 8px;
+    /* Reduce the padding */
+    border-radius: 10px;
+}
+
+.header {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 8px;
+    /* Reduce the margin */
+}
+
+.header-left {
+    margin-right: 16px;
+    /* Reduce the margin */
+    text-align: left;
+    /* Align text to the left */
+}
+
+.youtube-icon {
+    width: 40px;
+    /* Reduce the size */
+    margin-bottom: 8px;
+    /* Reduce the margin */
+}
+
+.header-left h2 {
+    margin: 0;
+    font-size: 14px;
+    /* Reduce the font size */
+}
+
+.header-left p {
+    margin: 0;
+    font-size: 10px;
+    /* Reduce the font size */
+}
+
+.header-right {
+    width: 70%;
+}
+
+.video-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.video {
+    width: 48%;
+}
+
+.video-image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.video-info {
+    display: flex;
+    align-items: center;
+}
+
+.bulb-icon {
+    width: 12px;
+    /* Reduce the size */
+    margin-right: 4px;
+    /* Add margin to the right */
+}
+
+.video-title {
+    margin: 8px 0 0 0;
+    /* Reduce the margin */
+    font-size: 10px;
+    /* Reduce the font size */
+    display: flex;
+    align-items: center;
+}
+
+.video-description {
+    margin: 4px 0 0 0;
+    /* Reduce the margin */
+    color: #888;
+    font-size: 8px;
+    /* Reduce the font size */
+}
+
+.show-more {
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+    /* Reduce the margin */
+}
+
+.show-more button {
+    padding: 4px 40px;
+    /* Reduce the padding */
+    border: 1px solid black;
+    /* Add black border */
+    border-radius: 5px;
+    /* Make the border curved */
+    background-color: transparent;
+    /* Make the button transparent */
+    color: #0073e6;
+    font-size: 10px;
+    /* Reduce the font size */
+    display: flex;
+    align-items: center;
+    width: 150px;
+}
+
+.dropdown-icon {
+    margin-left: 4px;
+    /* Add margin to the left */
+}
+
+/* Categories section */
+.categories-section {
+    margin-top: 20px;
+    /* Move up closer to the first box */
+    width: 75%;
+}
+
+.categories-section h3 {
+    font-size: 12px;
+    /* Make the heading smaller */
+    text-align: left;
+    /* Align the heading to the left */
+    margin-left: 16px;
+    /* Add margin to the left */
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    /* Ensure equal gaps */
+}
+
+.category-box {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    /* Reduce the padding */
+    text-align: center;
+    width: 100%;
+}
+
+.category-box img {
+    width: 70px;
+    /* Increase the size */
+    height: 70px;
+    /* Increase the size */
+    margin-bottom: 5px;
+    /* Reduce the margin */
+    border-radius: 50%;
+    /* Wrap in a circle */
+    padding: 20px;
+    /* Increase padding */
+}
+
+.category-box:nth-child(1) img {
+    background-color: #ccfdff;
+    /* Light orange */
+}
+
+.category-box:nth-child(2) img {
+    background-color: #cce6ff;
+    /* Light green */
+}
+
+.category-box:nth-child(3) img {
+    background-color: #ccffcc;
+    /* Light blue */
+}
+
+.category-box:nth-child(4) img {
+    background-color: #ffebcc;
+    /* Light pink */
+}
+
+.category-box:nth-child(5) img {
+    background-color: #cce6ff;
+    /* Light orange */
+}
+
+.category-box:nth-child(6) img {
+    background-color: #ffebcc;
+    /* Light green */
+}
+
+.category-box:nth-child(7) img {
+    background-color: #ccfdff;
+    /* Light blue */
+}
+
+.category-box:nth-child(8) img {
+    background-color: #ccffcc;
+    ;
+    /* Light pink */
+}
+
+.category-box:nth-child(9) img {
+    background-color: #ccffcc;
+    /* Light orange */
+}
+
+.category-box:nth-child(10) img {
+    background-color: #ccfdff;
+    /* Light green */
+}
+
+.category-box:nth-child(11) img {
+    background-color: #ffebcc;
+    /* Light blue */
+}
+
+.category-box:nth-child(12) img {
+    background-color: #cce6ff;
+    /* Light pink */
+}
+
+.category-box p {
+    margin: 5px 0;
+    /* Reduce the margin */
+    font-size: 12px;
+    /* Reduce the font size */
+    font-weight: bold;
+}
+
+.category-box button {
+    padding: 5px 10px;
+    /* Reduce the padding */
+    border: none;
+    border-radius: 5px;
+    background-color: #0073e6;
+    color: white;
+    font-size: 10px;
+    /* Reduce the font size */
+    cursor: pointer;
+}
+
+/* Videos section */
+.videos-section {
+    margin-top: 20px;
+    width: 75%;
+}
+
+.videos-section h3 {
+    font-size: 12px;
+    text-align: left;
+    margin-left: 16px;
+}
+
+.videos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.video-box {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.video-box .video-title {
+    margin: 8px 0 0 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.video-box .video-description {
+    margin: 4px 0 0 0;
+    color: #888;
+    font-size: 12px;
+}
+
+.video-box .video-stats {
+    margin: 2px 0 0 0;
+    color: #888;
+    font-size: 10px;
+}
+
+@media (max-width: 768px) {
+    .videos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .videos-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.recent-activity-section {
+    margin-top: 20px;
+    width: 25%;
+    position: fixed;
+    right: 0;
+    top: 60px;
+    bottom: 0;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-left: 1px solid #ddd;
+    scrollbar-width: none;
+    /* For Firefox */
+    -ms-overflow-style: none;
+    /* For Internet Explorer and Edge */
+}
+
+.recent-activity-section::-webkit-scrollbar {
+    display: none;
+    /* For Chrome, Safari, and Opera */
+}
+
+.recent-activity-section h3 {
+    font-size: 14px;
+    text-align: left;
+    margin-bottom: 10px;
+    position: sticky;
+    top: 0;
+    background-color: #f9f9f9;
+    padding: 10px 0;
+    z-index: 1;
+}
+
+.recent-activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.recent-activity-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.recent-activity-image {
+    width: 70px;
+    height: 60px;
+    border-radius: 10%;
+    margin-right: 10px;
+}
+
+.recent-activity-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.recent-activity-title {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.recent-activity-description {
+    font-size: 12px;
+    color: #888;
+    margin: 5px 0 0 0;
+}
+
+.recent-activity-stats {
+    font-size: 10px;
+    color: #888;
+    margin: 2px 0 0 0;
+}
