@@ -195,44 +195,51 @@ const VideosComponent: React.FC = () => {
                 <iframe
                   width="100%"
                   height="200"
-                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                  src="https://www.youtube.com/embed/NastbtMCErI?si=mrftBnSMCi8pOYP7"
                   title="YouTube video player"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 ></iframe>
                 <p className="video-title">
-                  YOUR QUESTIONS answered March edition
+                  THE GREATEST CHALLENGE IS YOU! - Mr. Audu Desmond (Founder -
+                  'Built Environment Insights Africa')
                 </p>
-                <p className="video-description">The Villages</p>
+                <p className="video-description">Digital Dreams Ict Academy</p>
                 <p className="video-stats">607 views • 1 hour ago</p>
               </div>
               <div className="video-box">
                 <iframe
                   width="100%"
                   height="200"
-                  src="https://www.youtube.com/embed/3JZ_D3ELwOQ"
+                  src="https://www.youtube.com/embed/qr_ZU7ZpXP4?si=nZ5qfeEBToJoMrCA"
                   title="YouTube video player"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 ></iframe>
-                <p className="video-title">A shocking find in an oak tree</p>
-                <p className="video-description">Dale Atwood</p>
+                <p className="video-title">
+                  Be Hungry as an Entrepreneur - Mrs. Adanma Chinyere
+                </p>
+                <p className="video-description">Digital Dreams Ict Academy</p>
                 <p className="video-stats">534 views • 5 minutes ago</p>
               </div>
               <div className="video-box">
                 <iframe
                   width="100%"
                   height="200"
-                  src="https://www.youtube.com/embed/l482T0yNkeo"
+                  src="https://www.youtube.com/embed/IqyZ-LnDgr4?si=HIE1gVri7hfEbFf-"
                   title="YouTube video player"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 ></iframe>
-                <p className="video-title">1 in a Million MLB Moments</p>
-                <p className="video-description">MLB</p>
+                <p className="video-title">
+                  Be Hungry as an Entrepreneur - Mrs. Adanma ChinyereMY FAILURE
+                  TAUGHT ME A GREAT LESSON - Mrs. Adanma Chinyere (Founder
+                  Sparks Ventures Hub)
+                </p>
+                <p className="video-description">Digital Dreams Ict Academy</p>
                 <p className="video-stats">1.5M views • 1 month ago</p>
               </div>
               {/* Second row */}
@@ -240,42 +247,51 @@ const VideosComponent: React.FC = () => {
                 <iframe
                   width="100%"
                   height="200"
-                  src="https://www.youtube.com/embed/2Vv-BfVoq4g"
+                  src="https://www.youtube.com/embed/4c_4PSmOLpo?si=yf2y4YA9zXkCdMVB"
                   title="YouTube video player"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 ></iframe>
-                <p className="video-title">Mortal Kombat: End Game</p>
-                <p className="video-description">Thriller</p>
+                <p className="video-title">
+                  MY FAILURE TAUGHT ME A GREAT LESSON - Mrs. Adanma Chinyere
+                  (Founder Sparks Ventures Hub)
+                </p>
+                <p className="video-description">Digital Dreams Ict Academy</p>
                 <p className="video-stats">4.5 ★</p>
               </div>
               <div className="video-box">
                 <iframe
                   width="100%"
                   height="200"
-                  src="https://www.youtube.com/embed/9bZkp7q19f0"
+                  src="https://www.youtube.com/embed/MwvLpVheY_0?si=P9sMBue2jMKu1Enn"
                   title="YouTube video player"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 ></iframe>
-                <p className="video-title">Candy Crush Saga</p>
-                <p className="video-description">Puzzle</p>
+                <p className="video-title">
+                  Your Success Is Tied To Your Network - Christian Chika Eze
+                  (Founder Centadesk Global Services)
+                </p>
+                <p className="video-description">Digital Dreams Ict Academy</p>
                 <p className="video-stats">4.5 ★</p>
               </div>
               <div className="video-box">
                 <iframe
                   width="100%"
                   height="200"
-                  src="https://www.youtube.com/embed/3tmd-ClpJxA"
+                  src="https://www.youtube.com/embed/VzCdTaDeD5I?si=x51qkFPspLqZzEMu"
                   title="YouTube video player"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 ></iframe>
-                <p className="video-title">Mortal Kombat: End Game</p>
-                <p className="video-description">Thriller</p>
+                <p className="video-title">
+                  The Best May Be The Person Who Didn't Start - Emmanuel Chisom
+                  Eze, Founder & CEO at Carsle.com
+                </p>
+                <p className="video-description">Digital Dreams Ict Academy</p>
                 <p className="video-stats">4.5 ★</p>
               </div>
               {/* Third row */}
@@ -283,42 +299,51 @@ const VideosComponent: React.FC = () => {
                 <iframe
                   width="100%"
                   height="200"
-                  src="https://www.youtube.com/embed/6Dh-RL__uN4"
+                  src="https://www.youtube.com/embed/Q9e_W___Tdc?si=reouUhrVNJ57YiHE"
                   title="YouTube video player"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 ></iframe>
-                <p className="video-title">Mortal Kombat: End Game</p>
-                <p className="video-description">Thriller</p>
+                <p className="video-title">
+                  Staying Relevant Gives Longevity - Tech Founder's Stories -
+                  Eliezer Ajah
+                </p>
+                <p className="video-description">Digital Dreams Ict Academy</p>
                 <p className="video-stats">4.5 ★</p>
               </div>
               <div className="video-box">
                 <iframe
                   width="100%"
                   height="200"
-                  src="https://www.youtube.com/embed/OPf0YbXqDm0"
+                  src="https://www.youtube.com/embed/jFx6stspkIs?si=khJYowfsKmv0e9y4"
                   title="YouTube video player"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 ></iframe>
-                <p className="video-title">Mortal Kombat: End Game</p>
-                <p className="video-description">Thriller</p>
+                <p className="video-title">
+                  How To Start Your Tech Business - Tech Founder's Stories -
+                  Ogugua Belonwu, founder MyJobMag.com
+                </p>
+                <p className="video-description">Digital Dreams Ict Academy</p>
                 <p className="video-stats">4.5 ★</p>
               </div>
               <div className="video-box">
                 <iframe
                   width="100%"
                   height="200"
-                  src="https://www.youtube.com/embed/2vjPBrBU-TM"
+                  src="https://www.youtube.com/embed/MwvLpVheY_0?si=09R8zr7y5H3yJoMd"
                   title="YouTube video player"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 ></iframe>
-                <p className="video-title">Mortal Kombat: End Game</p>
-                <p className="video-description">Thriller</p>
+                <p className="video-title">
+                  Your Success Is Tied To Your Network - Christian Chika Eze
+                  (Founder Centadesk Global Services)
+                </p>
+                <p className="video-description">Digital Dreams Ict Academy</p>
                 <p className="video-stats">4.5 ★</p>
               </div>
             </div>
