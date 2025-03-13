@@ -4,7 +4,7 @@
     justify-content: flex-start;
     margin-top: 2rem;
     /* Use relative units */
-    margin-left: 12rem;
+    margin-left: 10rem;
     margin-bottom: 2rem;
     width: 60%;
 }
@@ -261,7 +261,7 @@
 
 .video-box .video-title {
     margin: 0.5rem 0 0 0;
-    font-size: 1rem;
+    font-size: 12px;
     font-weight: bold;
 }
 
