@@ -26,7 +26,7 @@ const EBooksComponent: React.FC = () => {
     const topNavbar = document.createElement("div");
     topNavbar.style.position = "fixed";
     topNavbar.style.top = "0";
-    topNavbar.style.left = "170px";
+    topNavbar.style.left = "250px";
     topNavbar.style.right = "0";
     topNavbar.style.height = "60px";
     topNavbar.style.backgroundColor = "white";
@@ -56,8 +56,8 @@ const EBooksComponent: React.FC = () => {
     mainContent.style.padding = "20px";
     mainContent.style.backgroundColor = "white";
     mainContent.style.minHeight = "100vh"; // Ensure it expands
-    mainContent.style.width = "80%"; // Adjust the width of the main content
-    mainContent.style.marginLeft = "-40px"; // Ensure it is positioned correctly
+    mainContent.style.width = "73%"; // Adjust the width of the main content
+    mainContent.style.marginLeft = "40px"; // Ensure it is positioned correctly
     mainContent.style.overflowY = "scroll"; // Enable vertical scrolling
     mainContent.style.scrollbarWidth = "thin"; // For Firefox
     mainContent.style.scrollbarColor = "transparent transparent"; // For Firefox
