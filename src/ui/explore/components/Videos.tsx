@@ -22,7 +22,7 @@ const VideosComponent: React.FC = () => {
     const topNavbar = document.createElement("div");
     topNavbar.style.position = "fixed";
     topNavbar.style.top = "0";
-    topNavbar.style.left = "170px";
+    topNavbar.style.left = "250px";
     topNavbar.style.right = "0";
     topNavbar.style.height = "60px";
     topNavbar.style.backgroundColor = "white";

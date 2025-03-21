@@ -28,7 +28,7 @@ const NavbarComponent: React.FC = () => {
     navContainer.style.position = "fixed";
     navContainer.style.top = "0";
     navContainer.style.left = "0";
-    navContainer.style.width = "165px";
+    navContainer.style.width = "250px";
     navContainer.style.height = "100vh";
     navContainer.style.display = "flex";
     navContainer.style.flexDirection = "row"; // Side by side
@@ -36,7 +36,7 @@ const NavbarComponent: React.FC = () => {
 
     // Left Sidebar
     const leftSidebar = document.createElement("div");
-    leftSidebar.style.width = "40%"; // Increase the width of the left sidebar
+    leftSidebar.style.width = "30%"; // Increase the width of the left sidebar
     leftSidebar.style.height = "100%";
     leftSidebar.style.backgroundColor = "blue";
     leftSidebar.style.display = "flex";
@@ -63,7 +63,7 @@ const NavbarComponent: React.FC = () => {
 
     // Right Sidebar
     const rightSidebar = document.createElement("div");
-    rightSidebar.style.width = "65%"; // Increase the width of the right sidebar
+    rightSidebar.style.width = "75%"; // Increase the width of the right sidebar
     rightSidebar.style.height = "100%";
     rightSidebar.style.backgroundColor = "#D4DEFF";
     rightSidebar.style.display = "flex";
@@ -174,7 +174,7 @@ const NavbarComponent: React.FC = () => {
     const topNavbar = document.createElement("div");
     topNavbar.style.position = "fixed";
     topNavbar.style.top = "0";
-    topNavbar.style.left = "170px";
+    topNavbar.style.left = "250px";
     topNavbar.style.right = "0";
     topNavbar.style.height = "60px";
     topNavbar.style.backgroundColor = "white";
@@ -201,9 +201,9 @@ const NavbarComponent: React.FC = () => {
     const mainContent = document.createElement("div");
     mainContent.style.padding = "20px";
     mainContent.style.backgroundColor = "white";
-    mainContent.style.width = "72%"; // Compress the width of the main content
+    mainContent.style.width = "65%"; // Compress the width of the main content
     mainContent.style.minHeight = "100vh"; // Ensure it expands
-    mainContent.style.marginLeft = "82px"; // Adjust to shift closer to the sidebar
+    mainContent.style.marginLeft = "170px"; // Adjust to shift closer to the sidebar
     mainContent.style.marginTop = "5px"; // Ensure it scrolls under the navbar
     mainContent.style.overflowY = "scroll"; // Enable vertical scrolling
     mainContent.style.scrollbarWidth = "thin"; // For Firefox
@@ -221,7 +221,7 @@ const NavbarComponent: React.FC = () => {
     firstBox.style.alignItems = "flex-start"; // Align items to the left
     firstBox.style.width = "92%"; // Shrink the width of the first box
     firstBox.style.height = "auto";
-    firstBox.style.backgroundColor = "#f0f0f0";
+    firstBox.style.backgroundColor = "#D4DEFF";
     firstBox.style.borderRadius = "10px";
     firstBox.style.boxShadow = "0 2px 5px rgba(0, 0, 0, 0.1)";
     firstBox.style.marginBottom = "20px";
@@ -243,8 +243,11 @@ const NavbarComponent: React.FC = () => {
     heading.textContent = "Daughters of Divine Love Juniorate";
     heading.style.color = "black";
     heading.style.marginBottom = "10px";
-    heading.style.fontSize = "25px";
-    heading.style.fontWeight = "bold";
+    heading.style.color= '#2F55DD';
+    heading.style.fontSize= '24px';
+    heading.style.fontFamily= 'Urbanist';
+    heading.style.fontWeight=' 600';
+
 
     // Paragraph
     const paragraph = document.createElement("p");
@@ -252,7 +255,11 @@ const NavbarComponent: React.FC = () => {
       "Gain access to a wide range of practice tests tailored to help manage your time effectively, and boost your confidence before the big day.";
     paragraph.style.color = "black";
     paragraph.style.marginBottom = "10px";
-    paragraph.style.fontSize = "12px";
+    paragraph.style.color= '#4E5566';
+    paragraph.style.fontSize= '10px';
+    paragraph.style.fontFamily= 'Urbanist';
+    paragraph.style.fontWeight= '500px';
+    paragraph.style.lineHeight= '16px';;
 
     // Link
     const link = document.createElement("a");
@@ -260,13 +267,18 @@ const NavbarComponent: React.FC = () => {
     link.textContent = "Purchase form for N10,000";
     link.style.color = "blue";
     link.style.marginBottom = "10px";
-    link.style.fontSize = "12px";
+    link.style.color= "#2F55DD";
+    link.style.fontSize = "14px";
+    link.style.fontFamily = "Urbanist";
+    link.style.fontWeight = "400px";
+    link.style.textDecoration = "Underline";
+   
 
     // Button Container
     const buttonContainer = document.createElement("div");
     buttonContainer.style.display = "flex";
     buttonContainer.style.gap = "10px";
-    contentContainer.style.paddingBottom = "15px"; // Adjust the width to 50% of the box
+    contentContainer.style.paddingBottom = "10px"; // Adjust the width to 50% of the box
 
     // Purchase Form Button
     const purchaseButton = document.createElement("button");
@@ -277,17 +289,30 @@ const NavbarComponent: React.FC = () => {
     purchaseButton.style.backgroundColor = "#007bff";
     purchaseButton.style.color = "white";
     purchaseButton.style.cursor = "pointer";
-    purchaseButton.style.fontSize = "12px";
+    purchaseButton.style.fontSize = "9px";
+    purchaseButton.style.fontFamily = "Urbanist";
+    purchaseButton.style.fontWeight = "600px";
+    purchaseButton.style.textTransform = "Capitalize";
+    purchaseButton.style.lineHeight = "28px";
+    purchaseButton.style.paddingRight = "20px";
+    purchaseButton.style.paddingLeft = "20px";
+   
     // See Details Button
     const detailsButton = document.createElement("button");
     detailsButton.textContent = "See Details";
     detailsButton.style.padding = "10px 20px";
-    detailsButton.style.border = "none";
+    detailsButton.style.border = "blue 1px solid";
     detailsButton.style.borderRadius = "5px";
-    detailsButton.style.backgroundColor = "#6c757d";
-    detailsButton.style.color = "white";
+    detailsButton.style.backgroundColor = "#D4DEFF";
+    detailsButton.style.color = "#426CFF";
     detailsButton.style.cursor = "pointer";
     detailsButton.style.fontSize = "12px";
+    detailsButton.style.fontFamily = "Urbanist";
+    detailsButton.style.fontWeight = "600px";
+    detailsButton.style.textTransform = "Capitalize";
+    detailsButton.style.lineHeight = "28px";
+    detailsButton.style.paddingRight = "20px";
+    detailsButton.style.paddingLeft = "20px";
 
     // Append buttons to button container
     buttonContainer.appendChild(purchaseButton);
@@ -353,20 +378,28 @@ const NavbarComponent: React.FC = () => {
     subHeading.innerHTML = "Computer Based Examination <br> Practice Test";
     subHeading.style.color = "white"; // Set text color to white
     subHeading.style.marginBottom = "30px"; // Add more space between the header and other contents
-    subHeading.style.fontSize = "14px";
     subHeading.style.fontWeight = "bold";
+    subHeading.style.color= 'white';
+    subHeading.style.fontSize= '18px';
+    subHeading.style.fontFamily= 'Urbanist';
+    subHeading.style.fontWeight= '700';
+    subHeading.style.textTransform= 'capitalize';
+    subHeading.style.wordWrap= 'breakWord'
 
     // Small Button for newBox1
     const smallButton = document.createElement("button");
     smallButton.textContent = "Get";
-    smallButton.style.fontSize = "12px";
     smallButton.style.padding = "5px 10px";
     smallButton.style.border = "none";
     smallButton.style.borderRadius = "5px";
     smallButton.style.backgroundColor = "white"; // Set background color to white
-    smallButton.style.color = "blue"; // Set text color to blue
     smallButton.style.cursor = "pointer";
     smallButton.style.marginBottom = "10px";
+    smallButton.style.color= '#2F55DD';
+    smallButton.style.fontSize= '8px';
+    smallButton.style.fontFamily= 'Inter';
+    smallButton.style.fontWeight= '400';
+    smallButton.style.textTransform= 'uppercase';
 
     // Paragraph for newBox1
     const smallParagraph = document.createElement("p");
@@ -374,7 +407,10 @@ const NavbarComponent: React.FC = () => {
       "Explore fun and educational games designed to enhance learning and engagement for students";
     smallParagraph.style.color = "white"; // Set text color to white
     smallParagraph.style.marginBottom = "10px";
-    smallParagraph.style.fontSize = "12px";
+    smallParagraph.style.color= '#F0F0F0';
+    smallParagraph.style.fontSize= '12px';
+    smallParagraph.style.fontFamily= 'Urbanist';
+    smallParagraph.style.fontWeight= '500';
 
     // Image for newBox1
     const smallImage = document.createElement("img");
@@ -384,7 +420,7 @@ const NavbarComponent: React.FC = () => {
     smallImage.style.height = "auto";
     smallImage.style.position = "absolute";
     smallImage.style.top = "10px";
-    smallImage.style.right = "1px";
+    smallImage.style.right = "-7px";
 
     // Append all elements to the first new box
     newBox1.appendChild(subHeading);
@@ -408,20 +444,27 @@ const NavbarComponent: React.FC = () => {
     subHeading2.innerHTML = "Fun & Educative games";
     subHeading2.style.color = "white"; // Set text color to white
     subHeading2.style.marginBottom = "50px"; // Add more space between the header and other contents
-    subHeading2.style.fontSize = "14px";
     subHeading2.style.fontWeight = "bold";
+    subHeading2.style.fontSize= '18px';
+    subHeading2.style.fontFamily= 'Urbanist';
+    subHeading2.style.fontWeight= '700';
+    subHeading2.style.textTransform= 'capitalize';
+    subHeading2.style.wordWrap= 'breakWord'
 
     // Small Button for newBox2
     const smallButton2 = document.createElement("button");
     smallButton2.textContent = "Get";
-    smallButton2.style.fontSize = "12px";
     smallButton2.style.padding = "5px 10px";
     smallButton2.style.border = "none";
     smallButton2.style.borderRadius = "5px";
     smallButton2.style.backgroundColor = "white"; // Set background color to white
-    smallButton2.style.color = "blue"; // Set text color to blue
     smallButton2.style.cursor = "pointer";
     smallButton2.style.marginBottom = "10px";
+    smallButton2.style.color= '#2F55DD';
+    smallButton2.style.fontSize= '8px';
+    smallButton2.style.fontFamily= 'Inter';
+    smallButton2.style.fontWeight= '400';
+    smallButton2.style.textTransform= 'uppercase';
 
     // Paragraph for newBox2
     const smallParagraph2 = document.createElement("p");
@@ -429,7 +472,10 @@ const NavbarComponent: React.FC = () => {
       "Explore fun and educational games designed to enhance learning and engagement for students";
     smallParagraph2.style.color = "white"; // Set text color to white
     smallParagraph2.style.marginBottom = "10px";
-    smallParagraph2.style.fontSize = "12px";
+    smallParagraph2.style.color= '#F0F0F0';
+    smallParagraph2.style.fontSize= '12px';
+    smallParagraph2.style.fontFamily= 'Urbanist';
+    smallParagraph2.style.fontWeight= '500';
 
     // Image for newBox2
     const smallImage2 = document.createElement("img");
@@ -477,20 +523,27 @@ const NavbarComponent: React.FC = () => {
     subHeading3.innerHTML = "Board approved books <br> and Novels";
     subHeading3.style.color = "white"; // Set text color to white
     subHeading3.style.marginBottom = "30px"; // Add more space between the header and other contents
-    subHeading3.style.fontSize = "14px";
     subHeading3.style.fontWeight = "bold";
+    subHeading3.style.fontSize= '18px';
+    subHeading3.style.fontFamily= 'Urbanist';
+    subHeading3.style.fontWeight= '700';
+    subHeading3.style.textTransform= 'capitalize';
+    subHeading3.style.wordWrap= 'breakWord'
 
     // Small Button for newBox3
     const smallButton3 = document.createElement("button");
     smallButton3.textContent = "Get";
-    smallButton3.style.fontSize = "12px";
     smallButton3.style.padding = "5px 10px";
     smallButton3.style.border = "none";
     smallButton3.style.borderRadius = "5px";
     smallButton3.style.backgroundColor = "white"; // Set background color to white
-    smallButton3.style.color = "blue"; // Set text color to blue
     smallButton3.style.cursor = "pointer";
     smallButton3.style.marginBottom = "10px";
+    smallButton3.style.color= '#2F55DD';
+    smallButton3.style.fontSize= '8px';
+    smallButton3.style.fontFamily= 'Inter';
+    smallButton3.style.fontWeight= '400';
+    smallButton3.style.textTransform= 'uppercase';
 
     // Paragraph for newBox3
     const smallParagraph3 = document.createElement("p");
@@ -498,7 +551,10 @@ const NavbarComponent: React.FC = () => {
       "Explore fun and educational games designed to enhance learning and engagement for students";
     smallParagraph3.style.color = "white"; // Set text color to white
     smallParagraph3.style.marginBottom = "10px";
-    smallParagraph3.style.fontSize = "12px";
+    smallParagraph3.style.color= '#F0F0F0';
+    smallParagraph3.style.fontSize= '12px';
+    smallParagraph3.style.fontFamily= 'Urbanist';
+    smallParagraph3.style.fontWeight= '500';
 
     // Image for newBox3
     const smallImage3 = document.createElement("img");
@@ -532,20 +588,27 @@ const NavbarComponent: React.FC = () => {
     subHeading4.innerHTML = "Academic videos";
     subHeading4.style.color = "white"; // Set text color to white
     subHeading4.style.marginBottom = "50px"; // Add more space between the header and other contents
-    subHeading4.style.fontSize = "14px";
     subHeading4.style.fontWeight = "bold";
+    subHeading4.style.fontSize= '18px';
+    subHeading4.style.fontFamily= 'Urbanist';
+    subHeading4.style.fontWeight= '700';
+    subHeading4.style.textTransform= 'capitalize';
+    subHeading4.style.wordWrap= 'breakWord'
 
     // Small Button for newBox4
     const smallButton4 = document.createElement("button");
     smallButton4.textContent = "Get";
-    smallButton4.style.fontSize = "12px";
     smallButton4.style.padding = "5px 10px";
     smallButton4.style.border = "none";
     smallButton4.style.borderRadius = "5px";
     smallButton4.style.backgroundColor = "white"; // Set background color to white
-    smallButton4.style.color = "blue"; // Set text color to blue
     smallButton4.style.cursor = "pointer";
     smallButton4.style.marginBottom = "10px";
+    smallButton4.style.color= '#2F55DD';
+    smallButton4.style.fontSize= '8px';
+    smallButton4.style.fontFamily= 'Inter';
+    smallButton4.style.fontWeight= '400';
+    smallButton4.style.textTransform= 'uppercase';
 
     // Paragraph for newBox4
     const smallParagraph4 = document.createElement("p");
@@ -553,7 +616,10 @@ const NavbarComponent: React.FC = () => {
       "Explore fun and educational games designed to enhance learning and engagement for students";
     smallParagraph4.style.color = "white"; // Set text color to white
     smallParagraph4.style.marginBottom = "10px";
-    smallParagraph4.style.fontSize = "12px";
+    smallParagraph4.style.color= '#F0F0F0';
+    smallParagraph4.style.fontSize= '12px';
+    smallParagraph4.style.fontFamily= 'Urbanist';
+    smallParagraph4.style.fontWeight= '500';
 
     // Image for newBox4
     const smallImage4 = document.createElement("img");
@@ -650,6 +716,11 @@ const NavbarComponent: React.FC = () => {
       videoTitle.style.fontSize = "14px";
       videoTitle.style.fontWeight = "bold";
       videoTitle.style.marginBottom = "5px";
+      videoTitle.style.color= '#1A1A1A';
+      videoTitle.style.fontSize= '15px';
+      videoTitle.style.fontFamily= 'Urbanist';
+      videoTitle.style.fontWeight= '500';
+      videoTitle.style.textTransform= 'capitalize';
 
       // Video channel
       const videoChannel = document.createElement("p");
@@ -657,6 +728,11 @@ const NavbarComponent: React.FC = () => {
       videoChannel.style.color = "gray";
       videoChannel.style.fontSize = "12px";
       videoChannel.style.marginBottom = "5px";
+      videoChannel.style.color= '#414141';
+      videoChannel.style.fontSize= '12px';
+      videoChannel.style.fontFamily= 'Urbanist';
+      videoChannel.style.fontWeight= '500';
+      videoChannel.style.textTransform= 'capitalize';
 
       // Video views and time
       const videoViewsTime = document.createElement("p");

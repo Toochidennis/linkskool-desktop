@@ -16,7 +16,7 @@ const Sidebar: React.FC = () => {
     navContainer.style.position = "fixed";
     navContainer.style.top = "0";
     navContainer.style.left = "0";
-    navContainer.style.width = "165px";
+    navContainer.style.width = "250px";
     navContainer.style.height = "100vh";
     navContainer.style.display = "flex";
     navContainer.style.flexDirection = "row"; // Side by side
@@ -24,7 +24,7 @@ const Sidebar: React.FC = () => {
 
     // Left Sidebar
     const leftSidebar = document.createElement("div");
-    leftSidebar.style.width = "40%"; // Increase the width of the left sidebar
+    leftSidebar.style.width = "30%"; // Increase the width of the left sidebar
     leftSidebar.style.height = "100%";
     leftSidebar.style.backgroundColor = "blue";
     leftSidebar.style.display = "flex";
@@ -51,7 +51,7 @@ const Sidebar: React.FC = () => {
 
     // Right Sidebar
     const rightSidebar = document.createElement("div");
-    rightSidebar.style.width = "65%"; // Increase the width of the right sidebar
+    rightSidebar.style.width = "75%"; // Increase the width of the right sidebar
     rightSidebar.style.height = "100%";
     rightSidebar.style.backgroundColor = "#D4DEFF";
     rightSidebar.style.display = "flex";
