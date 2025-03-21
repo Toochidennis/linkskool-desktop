@@ -1,20 +1,12 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate, Link } from 'react-router-dom';
 import Sidebar from "./Sidebar"; // Import Sidebar
-// import exploreIcon from "../../assets/img/icons8_dashboard_layout 1.png";
-// import cbtIcon from "../../assets/img/icons8_imac 1.png";
-// import ebooksIcon from "../../assets/img/icons8_books 1.png";
-// import portalIcon from "../../assets/img/icons8_school_1 1.png";
-// import videosIcon from "../../assets/img/icons8_video_playlist_1 1.png";
-// import globeIcon from "../../assets/img/icons8_globe_1 1.png";
-// import notificationIcon from "../../assets/img/icons8_notification_3 1.png";
-// import logoutIcon from "../../assets/img/icons8_Logout_Rounded 1.png";
-// import gamesIcon from "../../assets/img/Vector.png";
-// import settingsIcon from "../../assets/img/icons8_settings_1 1.png";
 import Book from "../../assets/img/book 1 3.png";
 import Books from "../../assets/img/book 2 2.png";
 
 const EBooksComponent: React.FC = () => {
+  const navigate = useNavigate();
+
   useEffect(() => {
     const container = document.createElement("div");
     container.style.display = "flex";
@@ -34,7 +26,6 @@ const EBooksComponent: React.FC = () => {
     topNavbar.style.alignItems = "center";
     topNavbar.style.padding = "0 20px";
     topNavbar.style.width = "57%";
-    //topNavbar.style.boxShadow = "0 2px 5px rgba(0, 0, 0, 0.1)";
 
     // Search Bar
     const searchInput = document.createElement("input");
@@ -62,11 +53,6 @@ const EBooksComponent: React.FC = () => {
     mainContent.style.scrollbarWidth = "thin"; // For Firefox
     mainContent.style.scrollbarColor = "transparent transparent"; // For Firefox
 
-    // Custom scrollbar for WebKit browsers (Chrome, Safari)
-    // mainContent.style.WebkitOverflowScrolling = "touch";
-    // mainContent.style.WebkitScrollbarWidth = "thin";
-    // mainContent.style.WebkitScrollbarColor = "transparent transparent";
-
     // New Box (Content Box)
     const newBox = document.createElement("div");
     newBox.style.display = "flex";
@@ -91,10 +77,12 @@ const EBooksComponent: React.FC = () => {
     // Heading
     const heading = document.createElement("h2");
     heading.textContent = "Purple Hibiscus: Kambili and her brother Ahanna";
-    heading.style.color = "black";
+    heading.style.color = "#1A1A1A";
     heading.style.marginBottom = "10px";
-    heading.style.fontSize = "25px";
+    heading.style.fontSize = "24px";
     heading.style.fontWeight = "bold";
+    heading.style.fontFamily = "Urbanist";
+    heading.style.fontWeight = "600px";
 
     // Paragraph
     const paragraph = document.createElement("p");
@@ -102,7 +90,10 @@ const EBooksComponent: React.FC = () => {
       "Gain access to a wide range of practice tests tailored to help manage your time effectively, and boost your confidence before the big day.Gain access to a wide range of practice tests tailored to help manage your time effectively, and boost your confidence before the big day.";
     paragraph.style.color = "black";
     paragraph.style.marginBottom = "10px";
-    paragraph.style.fontSize = "12px";
+    paragraph.style.fontFamily = "Urbanist";
+    paragraph.style.fontWeight = "500px";
+    paragraph.style.lineHeight = "16px";
+    paragraph.style.color = "#5b5b5b";
 
     // Button
     const button = document.createElement("button");
@@ -110,11 +101,13 @@ const EBooksComponent: React.FC = () => {
     button.style.padding = "10px 20px";
     button.style.border = "none";
     button.style.borderRadius = "5px";
-    button.style.backgroundColor = "#007bff";
+    button.style.backgroundColor = "#9A3C94";
     button.style.color = "white";
     button.style.cursor = "pointer";
     button.style.width = "130px";
-    button.style.fontSize = "13px";
+    button.style.fontSize = "14px";
+    button.style.fontFamily = "Urbanist";
+    button.style.fontWeight = "500px";
 
     // Append all elements to the content container
     contentContainer.appendChild(heading);
@@ -146,8 +139,9 @@ const EBooksComponent: React.FC = () => {
     recommendHeading.textContent = "We also recommend";
     recommendHeading.style.color = "black";
     recommendHeading.style.marginBottom = "20px";
-    recommendHeading.style.fontSize = "18px";
-    recommendHeading.style.fontWeight = "bold";
+    recommendHeading.style.fontSize = "20px";
+    recommendHeading.style.fontWeight = "600px";
+    recommendHeading.style.fontFamily = "Urbanist";
 
     // Append the heading to the new section
     recommendSection.appendChild(recommendHeading);
@@ -161,7 +155,7 @@ const EBooksComponent: React.FC = () => {
     gridContainer.style.marginLeft = "-50px";
 
     // Function to create a book item
-    const createBookItem = () => {
+    const createBookItem = (bookId: string) => {
       const bookItem = document.createElement("div");
       bookItem.style.display = "flex";
       bookItem.style.flexDirection = "column";
@@ -170,6 +164,10 @@ const EBooksComponent: React.FC = () => {
       bookItem.style.borderRadius = "10px";
       bookItem.style.boxShadow = "0 2px 5px rgba(0, 0, 0, 0.1)";
       bookItem.style.padding = "10px";
+      bookItem.style.cursor = 'pointer';
+      bookItem.onclick = () => {
+        navigate(`/bookview/${bookId}`);
+      };
 
       // Book image
       const bookImage = document.createElement("img");
@@ -183,11 +181,12 @@ const EBooksComponent: React.FC = () => {
       const bookTitle = document.createElement("h3");
       bookTitle.textContent = "Doom of Aliens";
       bookTitle.style.color = "black";
-      bookTitle.style.fontSize = "14px";
+      bookTitle.style.fontSize = "17.26px";
       bookTitle.style.fontWeight = "bold";
       bookTitle.style.marginTop = "10px";
       bookTitle.style.marginBottom = "5px";
       bookTitle.style.textAlign = "center";
+      bookTitle.style.fontFamily = "Urbanist";
 
       // Book author
       const bookAuthor = document.createElement("p");
@@ -207,7 +206,11 @@ const EBooksComponent: React.FC = () => {
 
     // Create and append 4 book items to the grid container
     for (let i = 0; i < 4; i++) {
-      gridContainer.appendChild(createBookItem());
+      const bookItem = createBookItem(`book-${i + 1}`);
+      const bookLink = document.createElement("a");
+      bookLink.href = `/bookview/book-${i + 1}`;
+      bookLink.appendChild(bookItem);
+      gridContainer.appendChild(bookLink);
     }
 
     // Append the grid container to the new section
@@ -224,7 +227,11 @@ const EBooksComponent: React.FC = () => {
 
     // Create and append another 4 book items to the second grid container
     for (let i = 0; i < 4; i++) {
-      secondGridContainer.appendChild(createBookItem());
+      const bookItem = createBookItem(`book-${i + 5}`);
+      const bookLink = document.createElement("a");
+      bookLink.href = `/bookview/book-${i + 5}`;
+      bookLink.appendChild(bookItem);
+      secondGridContainer.appendChild(bookLink);
     }
 
     // Append the second grid container to the new section
@@ -250,13 +257,6 @@ const EBooksComponent: React.FC = () => {
     recentActivitySection.style.scrollbarWidth = "thin"; // For Firefox
     recentActivitySection.style.scrollbarColor = "transparent transparent"; // For Firefox
 
-    // Custom scrollbar for WebKit browsers (Chrome, Safari)
-    // recentActivitySection.style.webkitOverflowScrolling = "touch";
-    // recentActivitySection.style.WebkitOverflowScrolling = "touch";
-    // recentActivitySection.style.WebkitScrollbarWidth = "thin";
-    // recentActivitySection.style.WebkitScrollbarColor =
-    //   "transparent transparent";
-
     // Heading for Recent Activity
     const recentActivityHeading = document.createElement("h2");
     recentActivityHeading.textContent = "Recent Activity";
@@ -267,8 +267,9 @@ const EBooksComponent: React.FC = () => {
     recentActivityHeading.style.backgroundColor = "white";
     recentActivityHeading.style.padding = "10px";
     recentActivityHeading.style.zIndex = "1001"; // Ensure it stays on top of other elements
-    recentActivityHeading.style.fontSize = "18px";
-    recentActivityHeading.style.fontWeight = "bold";
+    recentActivityHeading.style.fontSize = "20px";
+    recentActivityHeading.style.fontWeight = "600px";
+    recentActivityHeading.style.fontFamily = "Urbanist";
 
     // Append the heading to the body
     document.body.appendChild(recentActivityHeading);
@@ -297,8 +298,9 @@ const EBooksComponent: React.FC = () => {
     const recentActivityTitle = document.createElement("h3");
     recentActivityTitle.textContent = "Doom Of Aliens";
     recentActivityTitle.style.color = "black";
-    recentActivityTitle.style.fontSize = "14px";
-    recentActivityTitle.style.fontWeight = "bold";
+    recentActivityTitle.style.fontSize = "20px";
+    recentActivityTitle.style.fontFamily = "Urbanist";
+    recentActivityTitle.style.fontWeight = "600px";
     recentActivityTitle.style.marginTop = "10px";
     recentActivityTitle.style.marginBottom = "5px";
     recentActivityTitle.style.textAlign = "center";
@@ -307,7 +309,9 @@ const EBooksComponent: React.FC = () => {
     const recentActivityAuthor = document.createElement("p");
     recentActivityAuthor.textContent = "by K. S. Jenson";
     recentActivityAuthor.style.color = "gray";
-    recentActivityAuthor.style.fontSize = "12px";
+    recentActivityAuthor.style.fontSize = "16px";
+    recentActivityAuthor.style.fontWeight = "500px";
+    recentActivityAuthor.style.fontFamily = "Urbanist";
     recentActivityAuthor.style.marginBottom = "5px";
     recentActivityAuthor.style.textAlign = "center";
 
@@ -316,7 +320,9 @@ const EBooksComponent: React.FC = () => {
     recentActivityDescription.textContent =
       "Gain access to a wide range of practice tests tailored to help manage your time effectively, and boost your confidence before the big day.";
     recentActivityDescription.style.color = "black";
-    recentActivityDescription.style.fontSize = "12px";
+    recentActivityDescription.style.fontSize = "10px";
+    recentActivityDescription.style.fontFamily = "Urbanist";
+    recentActivityDescription.style.fontWeight = "500px";
     recentActivityDescription.style.marginBottom = "10px";
     recentActivityDescription.style.textAlign = "center";
 
@@ -326,10 +332,12 @@ const EBooksComponent: React.FC = () => {
     recentActivityButton.style.padding = "10px 20px";
     recentActivityButton.style.border = "none";
     recentActivityButton.style.borderRadius = "5px";
-    recentActivityButton.style.backgroundColor = "#007bff";
-    recentActivityButton.style.color = "white";
+    recentActivityButton.style.backgroundColor = "skyblue";
+    recentActivityButton.style.color = "blue";
     recentActivityButton.style.cursor = "pointer";
-    recentActivityButton.style.fontSize = "13px";
+    recentActivityButton.style.fontSize = "14px";
+    recentActivityButton.style.fontFamily = "Urbanist";
+    recentActivityButton.style.fontWeight = "700px";
 
     // Append elements to recent activity item
     recentActivityItem.appendChild(recentActivityImage);
@@ -355,7 +363,7 @@ const EBooksComponent: React.FC = () => {
       document.body.removeChild(topNavbar);
       document.body.removeChild(container);
     };
-  }, []);
+  }, [navigate]);
 
   return (
     <div>
@@ -367,3 +375,4 @@ const EBooksComponent: React.FC = () => {
 };
 
 export default EBooksComponent;
+
