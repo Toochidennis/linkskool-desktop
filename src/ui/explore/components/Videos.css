@@ -2,11 +2,11 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin-top: 2rem;
+    margin-top: 1px;
     /* Use relative units */
     margin-left: 12.5rem;
     margin-bottom: 2rem;
-    width: 63%;
+    width: 60%;
 }
 
 .content-box {
@@ -127,7 +127,7 @@
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    margin-top: 45px;
+    margin-top: 15px;
 }
 
 .categories-section h3 {
@@ -293,7 +293,7 @@
 .recent-activity-section {
     margin-top: 1rem;
     width: 100%;
-    max-width: 300px;
+    max-width: 330px;
     position: fixed;
     right: 0;
     top: 60px;

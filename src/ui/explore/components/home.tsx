@@ -1,15 +1,9 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import exploreIcon from "../../assets/img/icons8_dashboard_layout 1.png";
-import cbtIcon from "../../assets/img/icons8_imac 1.png";
+// import exploreIcon from "../../assets/img/icons8_dashboard_layout 1.png";
+// import cbtIcon from "../../assets/img/icons8_imac 1.png";
 import ebooksIcon from "../../assets/img/icons8_books 1.png";
-import portalIcon from "../../assets/img/icons8_school_1 1.png";
 import videosIcon from "../../assets/img/icons8_video_playlist_1 1.png";
-import globeIcon from "../../assets/img/icons8_globe_1 1.png";
-import notificationIcon from "../../assets/img/icons8_notification_3 1.png";
-import logoutIcon from "../../assets/img/icons8_Logout_Rounded 1.png";
-import gamesIcon from "../../assets/img/Vector.png";
-import settingsIcon from "../../assets/img/icons8_settings_1 1.png";
 import Daughters from "../../assets/img/unsplash-igur1ix0mqm.png";
 import Box1 from "../../assets/img/pana.png";
 import Box2 from "../../assets/img/Hands.png";
@@ -24,164 +18,17 @@ const NavbarComponent: React.FC = () => {
     container.style.flexDirection = "row"; // Align sidebars and main content horizontally
     container.style.marginTop = "60px"; // Ensure space for top navbar
 
-    const navContainer = document.createElement("nav");
-    navContainer.style.position = "fixed";
-    navContainer.style.top = "0";
-    navContainer.style.left = "0";
-    navContainer.style.width = "250px";
-    navContainer.style.height = "100vh";
-    navContainer.style.display = "flex";
-    navContainer.style.flexDirection = "row"; // Side by side
-    navContainer.style.boxShadow = "2px 0px 5px rgba(0, 0, 0, 0.1)";
-
-    // Left Sidebar
-    const leftSidebar = document.createElement("div");
-    leftSidebar.style.width = "30%"; // Increase the width of the left sidebar
-    leftSidebar.style.height = "100%";
-    leftSidebar.style.backgroundColor = "blue";
-    leftSidebar.style.display = "flex";
-    leftSidebar.style.flexDirection = "column";
-    leftSidebar.style.alignItems = "center";
-    leftSidebar.style.justifyContent = "space-between"; // Space between top and bottom containers
-
-    const topLeftContainer = document.createElement("div");
-    topLeftContainer.style.display = "flex";
-    topLeftContainer.style.flexDirection = "column";
-    topLeftContainer.style.alignItems = "center";
-    topLeftContainer.style.gap = "20px";
-    topLeftContainer.style.marginTop = "150px"; // Add margin to create space at the top
-
-    const bottomLeftContainer = document.createElement("div");
-    bottomLeftContainer.style.display = "flex";
-    bottomLeftContainer.style.flexDirection = "column";
-    bottomLeftContainer.style.alignItems = "center";
-    bottomLeftContainer.style.gap = "3px";
-    bottomLeftContainer.style.marginBottom = "10px"; // Add margin to create space at the bottom
-
-    leftSidebar.appendChild(topLeftContainer);
-    leftSidebar.appendChild(bottomLeftContainer);
-
-    // Right Sidebar
-    const rightSidebar = document.createElement("div");
-    rightSidebar.style.width = "75%"; // Increase the width of the right sidebar
-    rightSidebar.style.height = "100%";
-    rightSidebar.style.backgroundColor = "#D4DEFF";
-    rightSidebar.style.display = "flex";
-    rightSidebar.style.flexDirection = "column";
-    rightSidebar.style.alignItems = "center";
-    rightSidebar.style.justifyContent = "top";
-    rightSidebar.style.gap = "20px";
-    rightSidebar.style.padding = "50px"; // Add padding to create space around the contents
-
-    // Wrapper for right sidebar content
-    const rightSidebarContent = document.createElement("div");
-    rightSidebarContent.style.marginTop = "70px"; // Add margin to push content down
-
-    const menuItems = [
-      {
-        icon: exploreIcon,
-        alt: "Explore",
-        sidebar: "right",
-        link: "/",
-        text: "Explore",
-      },
-      { icon: cbtIcon, alt: "Cbt", sidebar: "right", text: "CBT" },
-      {
-        icon: ebooksIcon,
-        alt: "E-books",
-        sidebar: "right",
-        link: "/e-books",
-        text: "E-Books",
-      },
-      {
-        icon: videosIcon,
-        alt: "Videos",
-        sidebar: "right",
-        link: "/videos",
-        text: "Videos",
-      },
-      { icon: globeIcon, alt: "Profile", sidebar: "left", position: "top" },
-      { icon: portalIcon, alt: "portal", sidebar: "left", position: "top" },
-      {
-        icon: notificationIcon,
-        alt: "notification",
-        sidebar: "left",
-        position: "bottom",
-      },
-      {
-        icon: settingsIcon,
-        alt: "Settings",
-        sidebar: "left",
-        position: "bottom",
-      },
-      { icon: logoutIcon, alt: "logout", sidebar: "left", position: "bottom" },
-      { icon: gamesIcon, alt: "games", sidebar: "right", text: "Games" },
-    ]; // Icons for nav items
-
-    menuItems.forEach((menuItem) => {
-      const item = document.createElement("div");
-      const img = document.createElement("img");
-      img.src = menuItem.icon;
-      img.alt = menuItem.alt;
-      img.style.width = "18px";
-      img.style.height = "18px";
-      if (menuItem.sidebar === "right") {
-        img.style.filter = "invert(1)"; // Make the icons black for right sidebar
-        item.style.display = "flex"; // Use flexbox to align items horizontally
-        item.style.alignItems = "center"; // Center align items vertically
-        item.style.justifyContent = "left"; // Align items to the left
-        item.appendChild(img); // Append the icon first
-        if (menuItem.text) {
-          const text = document.createElement("span");
-          text.textContent = menuItem.text;
-          text.style.marginLeft = "10px"; // Add some space between the icon and the text
-          text.style.color = "black"; // Ensure the text color is black
-          text.style.fontWeight =
-            menuItem.text === "Explore" ? "bold" : "normal"; // Make the text bold for Explore
-          text.style.fontSize = "12px"; // Reduce the font size
-          item.appendChild(text); // Append the text after the icon
-        }
-      } else {
-        item.style.display = "flex"; // Use flexbox to align items
-        item.style.justifyContent = "center"; // Center align items horizontally
-        item.style.alignItems = "left"; // Center align items vertically
-        item.appendChild(img); // Append the icon for left sidebar items
-      }
-      item.style.cursor = "pointer";
-      item.style.margin = "12px 0"; // Add margin to create space between icons
-
-      if (menuItem.sidebar === "left") {
-        if (menuItem.position === "top") {
-          topLeftContainer.appendChild(item);
-        } else {
-          bottomLeftContainer.appendChild(item);
-        }
-      } else {
-        if (menuItem.link) {
-          const link = document.createElement("a");
-          link.href = menuItem.link;
-          link.appendChild(item);
-          rightSidebarContent.appendChild(link);
-        } else {
-          rightSidebarContent.appendChild(item);
-        }
-      }
-    });
-
-    rightSidebar.appendChild(rightSidebarContent);
-
     // Top Navbar (Search Bar)
     const topNavbar = document.createElement("div");
     topNavbar.style.position = "fixed";
     topNavbar.style.top = "0";
-    topNavbar.style.left = "250px";
+    topNavbar.style.left = "250px"; // Adjusted to 0 since sidebars are removed
     topNavbar.style.right = "0";
     topNavbar.style.height = "60px";
     topNavbar.style.backgroundColor = "white";
     topNavbar.style.display = "flex";
     topNavbar.style.alignItems = "center";
     topNavbar.style.padding = "0 20px";
-    // topNavbar.style.boxShadow = "0 2px 5px rgba(0, 0, 0, 0.1)";
 
     // Search Bar
     const searchInput = document.createElement("input");
@@ -190,7 +37,7 @@ const NavbarComponent: React.FC = () => {
     searchInput.style.padding = "10px";
     searchInput.style.border = "1px solid #ddd";
     searchInput.style.borderRadius = "5px";
-    searchInput.style.width = "65%"; // Increase the width to match the new width of the main content
+    searchInput.style.width = "70%"; // Increase the width to match the new width of the main content
     searchInput.style.maxWidth = "none";
     searchInput.style.color = "black";
     searchInput.style.backgroundColor = "white";
@@ -201,10 +48,11 @@ const NavbarComponent: React.FC = () => {
     const mainContent = document.createElement("div");
     mainContent.style.padding = "20px";
     mainContent.style.backgroundColor = "white";
-    mainContent.style.width = "65%"; // Compress the width of the main content
+    mainContent.style.width = "67%"; // Adjusted to 100% since sidebars are removed
     mainContent.style.minHeight = "100vh"; // Ensure it expands
-    mainContent.style.marginLeft = "170px"; // Adjust to shift closer to the sidebar
     mainContent.style.marginTop = "5px"; // Ensure it scrolls under the navbar
+    mainContent.style.marginLeft = "135px"; // Ensure it scrolls under the navbar
+
     mainContent.style.overflowY = "scroll"; // Enable vertical scrolling
     mainContent.style.scrollbarWidth = "thin"; // For Firefox
     mainContent.style.scrollbarColor = "transparent transparent"; // For Firefox
@@ -224,7 +72,7 @@ const NavbarComponent: React.FC = () => {
     firstBox.style.backgroundColor = "#D4DEFF";
     firstBox.style.borderRadius = "10px";
     firstBox.style.boxShadow = "0 2px 5px rgba(0, 0, 0, 0.1)";
-    firstBox.style.marginBottom = "20px";
+    firstBox.style.marginBottom = "8px";
     firstBox.style.paddingLeft = "2px"; // Add padding for inner content
     firstBox.style.marginTop = "-15px"; // Move the box further to the top
     firstBox.style.marginRight = "50px"; // Move the box further to the right
@@ -343,13 +191,13 @@ const NavbarComponent: React.FC = () => {
     // Create a section for the four boxes
     const exploreSection = document.createElement("section");
     exploreSection.style.width = "100%"; // Ensure it takes the full width of the main content
-    exploreSection.style.marginTop = "20px"; // Add margin to create space below the first box
+    exploreSection.style.marginTop = "10px"; // Add margin to create space below the first box
 
     // Create the heading for the section
     const sectionHeading = document.createElement("h2");
     sectionHeading.textContent = "Explore Items";
     sectionHeading.style.color = "black";
-    sectionHeading.style.marginBottom = "20px";
+    sectionHeading.style.marginBottom = "5px";
     sectionHeading.style.fontSize = "18px";
     sectionHeading.style.fontWeight = "bold";
 
@@ -359,18 +207,18 @@ const NavbarComponent: React.FC = () => {
     // Create a container for the first set of two new boxes
     const twoBoxesContainer = document.createElement("div");
     twoBoxesContainer.style.display = "flex";
-    twoBoxesContainer.style.gap = "40px"; // Add gap between the boxes
+    twoBoxesContainer.style.gap = "20px"; // Add gap between the boxes
     twoBoxesContainer.style.width = "100%"; // Ensure it takes the full width of the section
 
     // Create the first new box
     const newBox1 = document.createElement("div");
-    newBox1.style.width = "43%"; // Set width to 48% to leave space for the gap
-    newBox1.style.height = "200px"; // Set height as needed
+    newBox1.style.width = "45%"; // Set width to 48% to leave space for the gap
+    newBox1.style.height = "167px"; // Set height as needed
     newBox1.style.background =
       "linear-gradient(180deg, #F4A261 0%, #FF7729 100%)";
     newBox1.style.borderRadius = "10px"; // Set border radius
     newBox1.style.boxShadow = "0 2px 5px rgba(0, 0, 0, 0.1)"; // Set box shadow
-    newBox1.style.padding = "20px"; // Add padding for inner content
+    newBox1.style.padding = "10px"; // Add padding for inner content
     newBox1.style.position = "relative"; // Ensure the image can be positioned absolutely
 
     // Heading for newBox1
@@ -416,11 +264,11 @@ const NavbarComponent: React.FC = () => {
     const smallImage = document.createElement("img");
     smallImage.src = Box1;
     smallImage.alt = "Educational Games";
-    smallImage.style.width = "100px"; // Adjust the width as needed
+    smallImage.style.width = "70px"; // Adjust the width as needed
     smallImage.style.height = "auto";
     smallImage.style.position = "absolute";
     smallImage.style.top = "10px";
-    smallImage.style.right = "-7px";
+    smallImage.style.right = "1px";
 
     // Append all elements to the first new box
     newBox1.appendChild(subHeading);
@@ -430,13 +278,13 @@ const NavbarComponent: React.FC = () => {
 
     // Create the second new box
     const newBox2 = document.createElement("div");
-    newBox2.style.width = "43%"; // Set width to 48% to leave space for the gap
-    newBox2.style.height = "200px"; // Set height as needed
+    newBox2.style.width = "45%"; // Set width to 48% to leave space for the gap
+    newBox2.style.height = "167px"; // Set height as needed
     newBox2.style.background =
       "linear-gradient(180deg, #2EC4B6 0%, #009082 100%)"; // Set background to linear gradient
     newBox2.style.borderRadius = "10px"; // Set border radius
     newBox2.style.boxShadow = "0 2px 5px rgba(0, 0, 0, 0.1)"; // Set box shadow
-    newBox2.style.padding = "20px"; // Add padding for inner content
+    newBox2.style.padding = "10px"; // Add padding for inner content
     newBox2.style.position = "relative"; // Ensure the image can be positioned absolutely
 
     // Heading for newBox2
@@ -481,7 +329,7 @@ const NavbarComponent: React.FC = () => {
     const smallImage2 = document.createElement("img");
     smallImage2.src = Box2;
     smallImage2.alt = "Educational Games";
-    smallImage2.style.width = "100px"; // Adjust the width as needed
+    smallImage2.style.width = "70px"; // Adjust the width as needed
     smallImage2.style.height = "auto";
     smallImage2.style.position = "absolute";
     smallImage2.style.top = "10px";
@@ -503,19 +351,19 @@ const NavbarComponent: React.FC = () => {
     // Create a container for the second set of two new boxes
     const secondTwoBoxesContainer = document.createElement("div");
     secondTwoBoxesContainer.style.display = "flex";
-    secondTwoBoxesContainer.style.gap = "40px"; // Add gap between the boxes
+    secondTwoBoxesContainer.style.gap = "20px"; // Add gap between the boxes
     secondTwoBoxesContainer.style.width = "100%"; // Ensure it takes the full width of the section
     secondTwoBoxesContainer.style.marginTop = "20px"; // Add margin to create space below the first set of boxes
 
     // Create the third new box
     const newBox3 = document.createElement("div");
-    newBox3.style.width = "43%"; // Set width to 48% to leave space for the gap
-    newBox3.style.height = "200px"; // Set height as needed
+    newBox3.style.width = "45%"; // Set width to 48% to leave space for the gap
+    newBox3.style.height = "167px"; // Set height as needed
     newBox3.style.background =
       "linear-gradient(180deg, #8B8CF5 0%, #3B3CFF 100%)"; // Set background to linear gradient
     newBox3.style.borderRadius = "10px"; // Set border radius
     newBox3.style.boxShadow = "0 2px 5px rgba(0, 0, 0, 0.1)"; // Set box shadow
-    newBox3.style.padding = "20px"; // Add padding for inner content
+    newBox3.style.padding = "10px"; // Add padding for inner content
     newBox3.style.position = "relative"; // Ensure the image can be positioned absolutely
 
     // Heading for newBox3
@@ -560,7 +408,7 @@ const NavbarComponent: React.FC = () => {
     const smallImage3 = document.createElement("img");
     smallImage3.src = Box3;
     smallImage3.alt = "Educational Games";
-    smallImage3.style.width = "100px"; // Adjust the width as needed
+    smallImage3.style.width = "70px"; // Adjust the width as needed
     smallImage3.style.height = "auto";
     smallImage3.style.position = "absolute";
     smallImage3.style.top = "10px";
@@ -574,13 +422,13 @@ const NavbarComponent: React.FC = () => {
 
     // Create the fourth new box
     const newBox4 = document.createElement("div");
-    newBox4.style.width = "43%"; // Set width to 48% to leave space for the gap
-    newBox4.style.height = "200px"; // Set height as needed
+    newBox4.style.width = "45%"; // Set width to 48% to leave space for the gap
+    newBox4.style.height = "167px"; // Set height as needed
     newBox4.style.background =
       "linear-gradient(180deg, #5454AA 0%, #1C1C3C 100%)"; // Set background to linear gradient
     newBox4.style.borderRadius = "10px"; // Set border radius
     newBox4.style.boxShadow = "0 2px 5px rgba(0, 0, 0, 0.1)"; // Set box shadow
-    newBox4.style.padding = "20px"; // Add padding for inner content
+    newBox4.style.padding = "10px"; // Add padding for inner content
     newBox4.style.position = "relative"; // Ensure the image can be positioned absolutely
 
     // Heading for newBox4
@@ -625,7 +473,7 @@ const NavbarComponent: React.FC = () => {
     const smallImage4 = document.createElement("img");
     smallImage4.src = Box4;
     smallImage4.alt = "Educational Games";
-    smallImage4.style.width = "100px"; // Adjust the width as needed
+    smallImage4.style.width = "70px"; // Adjust the width as needed
     smallImage4.style.height = "auto";
     smallImage4.style.position = "absolute";
     smallImage4.style.top = "10px";
@@ -766,12 +614,7 @@ const NavbarComponent: React.FC = () => {
     // Append main content to container
     container.appendChild(mainContent);
 
-    // Append nav elements to navContainer
-    navContainer.appendChild(leftSidebar);
-    navContainer.appendChild(rightSidebar);
-
     // Append the whole container to body
-    document.body.appendChild(navContainer);
     document.body.appendChild(topNavbar);
     document.body.appendChild(container);
 
@@ -892,7 +735,6 @@ const NavbarComponent: React.FC = () => {
     // };
 
     return () => {
-      document.body.removeChild(navContainer);
       document.body.removeChild(topNavbar);
       document.body.removeChild(container);
       document.body.removeChild(newsHeading);

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 // import { Link } from "react-router-dom";
-import Sidebar from "./Sidebar"; // Import Sidebar
+// import Sidebar from "./Sidebar"; // Import Sidebar
 import youtubeIcon from "../../assets/img/Image.png";
 import biximage from "../../assets/img/unsplash-igur1ix0mqm.png";
 import biximage2 from "../../assets/img/Image (1).png";
@@ -39,7 +39,7 @@ const VideosComponent: React.FC = () => {
     searchInput.style.padding = "10px";
     searchInput.style.border = "1px solid #ddd";
     searchInput.style.borderRadius = "5px";
-    searchInput.style.width = "100%"; // Increase the width to match the new width of the main content
+    searchInput.style.width = "90%"; // Increase the width to match the new width of the main content
     searchInput.style.maxWidth = "none";
     searchInput.style.color = "black";
     searchInput.style.backgroundColor = "white";
@@ -56,7 +56,7 @@ const VideosComponent: React.FC = () => {
 
   return (
     <div>
-      <Sidebar /> {/* Use Sidebar */}
+      {/* <Sidebar /> Use Sidebar */}
       <div>
         {/* Main content area */}
         <div className="main-content">

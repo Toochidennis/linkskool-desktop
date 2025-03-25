@@ -6,8 +6,6 @@ import logo from '../../assets/img/GraduationCap.png';
 
 const Bookview: React.FC = () => {
   const [mainContent, setMainContent] = useState<string[]>([
-    'Lorem ipsum dolor sit amet consectetur. Et nisl in volutpat ac suspendisse. Elementum ac ornare lectus cursus neque. Donec vel etiam nec vel proin in imperdiet tortor. Nisi facilisis adipiscing aliquet consequat blandit hendrerit nulla in facilisi. Congue odio egestas auctor sagittis. Sit justo scelerisque mauris libero sed pharetra nisl vestibulum. Sagittis iaculis sed suscipit leo. Tristique viverra mattis purus diam cursus rutrum mus vel.',
-    ''
   ]);
   const [isFullscreen, setIsFullscreen] = useState<boolean>(false);
 
@@ -47,12 +45,12 @@ const Bookview: React.FC = () => {
         </div>
       )}
       <div className={`main-contents ${isFullscreen ? 'fullscreen-content' : ''}`}>
-        {!isFullscreen && (
+        {/* {!isFullscreen && (
           <div className="search-bar">
             <input type="text" placeholder="Search..." />
             <button>Search</button>
           </div>
-        )}
+        )} */}
         {!isFullscreen && (
           <div className="book-details">
             <div className="book-title">Doom Of Aliens / Martians on Earth</div>
