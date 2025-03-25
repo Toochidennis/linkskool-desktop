@@ -367,7 +367,7 @@ const EBooksComponent: React.FC = () => {
 
   return (
     <div>
-      <Sidebar /> {/* Use Sidebar */}
+      <Sidebar /> Use Sidebar
       <Link to="/">Back to Home</Link>
       <div>{/* E-books content goes here */}</div>
     </div>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../Bookview.css';
 import bookCover from '../../assets/img/book 1 3.png';
 import logo from '../../assets/img/GraduationCap.png';
@@ -28,7 +29,9 @@ const Bookview: React.FC = () => {
       {!isFullscreen && (
         <div className="sidebar">
           <div className="logo-container">
-            <img src={logo} alt="Logo" className="logo" />
+            <Link to="/e-books">
+              <img src={logo} alt="Logo" className="logo" />
+            </Link>
             <div className="logo-text">
               <span className="link">Link</span>
               <span className="skool">Skool</span>
@@ -43,7 +46,7 @@ const Bookview: React.FC = () => {
           </div>
         </div>
       )}
-      <div className={`main-content ${isFullscreen ? 'fullscreen-content' : ''}`}>
+      <div className={`main-contents ${isFullscreen ? 'fullscreen-content' : ''}`}>
         {!isFullscreen && (
           <div className="search-bar">
             <input type="text" placeholder="Search..." />
@@ -67,13 +70,11 @@ const Bookview: React.FC = () => {
           <button className="shrink-button" onClick={handleShrinkClick}>❌</button>
         ) : (
           <button className="fullscreen-button" onClick={handleFullscreenClick}>Expand</button>
-          
-        ) 
-        }
+        )}
         <div className={`thumbnails ${isFullscreen ? 'fixed-thumbnails-fullscreen' : ''}`}>
           <div className="thumbnail-box" onClick={() => handleThumbnailClick('Phasellus quam quis vitae suspendisse vitae. Ipsum tellus est ac viverra a. Dolor potenti arcu scelerisque et viverra a non bibendum. Malesuada sagittis facilisis magna cursus sem nunc odio augue platea. Feugiat elit sollicitudin sed convallis quis suspendisse elit purus ac. Nec sed orci aliquet fermentum dui. Et sed consequat scelerisque ac. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Nulla porttitor accumsan tincidunt. Curabitur aliquet quam id dui posuere blandit. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec sollicitudin molestie malesuada. \n\n Nulla quis lorem ut libero malesuada feugiat. Pellentesque in ipsum id orci porta dapibus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vivamus suscipit tortor eget felis porttitor volutpat. Nulla quis lorem ut libero malesuada feugiat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Nulla porttitor accumsan tincidunt.')}>
             <div className="thumbnail">
-              <div className="text">set all the font-family in this project to Urbanist dont do anything else
+              <div className="text">
                 Phasellus quam quis vitae suspendisse vitae. Ipsum tellus est ac viverra a. Dolor potenti arcu scelerisque et viverra a non bibendum. Malesuada sagittis facilisis magna cursus sem nunc odio augue platea.
               </div>
             </div>
