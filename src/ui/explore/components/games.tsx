@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import "./games.css"; // Import the CSS file for styling
-// import Mortalcombact from "../../assets/img/image 65.png";
+ import Mortalcombact from "../../assets/img/image 65.png";
 import  Candycrush from "../../assets/img/image 64.png";
 import Candy from "../../assets/img/image 68.png";
-
+// import biximage from "../../assets/img/unsplash-igur1ix0mqm.png";
 const Games: React.FC = () => {
   useEffect(() => {
     // Fetch data or perform other side effects here
@@ -35,6 +35,49 @@ const Games: React.FC = () => {
             <img src={Candycrush} alt="Candy Crush" />
           </div>
         </div>
+        <section>
+        <div className="games-grid">
+          {[...Array(9)].map((_, index) => (
+            <div className="game-card" key={index}>
+              <img
+                src={index % 2 === 0 ? Mortalcombact : Candycrush }
+                alt="Game Thumbnail"
+              />
+              <h5>{index % 2 === 0 ? "Mortal Kombat: End Game" : "Candy Crush Saga" }</h5>
+              <p>{index % 2 === 0 ? "Thriller" : "Puzzle"}</p>
+              <span>4.5 ★</span>
+            </div>
+          ))}
+        </div>
+        </section>
+        <div className="recent-activity">
+            <h3>Recent activity</h3>
+            <div className="recent-activity-lists">
+              {Array.from({ length: 12 }).map((_, index) => (
+                <div className="recent-activity-items" key={index}>
+                  <img
+                    src={Candy}
+                    alt={`Recent activity ${index + 1}`}
+                    className="recent-activity-images"
+                  />
+                  <div className="recent-activity-infos">
+                    <div>
+                    <p className="recent-activity-titles">Candy Crush Saga: Elaba...</p>
+                    <p className="recent-activity-descriptions">
+                    Thriller
+                    </p>
+                    <p className="recent-activity-stat">
+                    4.5 ★
+                    </p>
+                    </div>
+                    <div>
+                    <button>Play now</button>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
       </div>
   );
 };
