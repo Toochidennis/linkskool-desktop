@@ -11,7 +11,7 @@ import Games from "./explore/components/games";
 
 function App() {
   return (
-    <Router>
+    <Router>it
       
       <Layout>
         <Routes>

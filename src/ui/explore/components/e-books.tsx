@@ -146,7 +146,8 @@ const EBooksComponent: React.FC = () => {
             marginBottom: "20px",
             fontSize: "20px",
             fontWeight: 600,
-            fontFamily: "Urbanist"
+            fontFamily: "Urbanist",
+            textAlign: "left"
           }}>We also recommend</h2>
           <div style={{
             display: "grid",
